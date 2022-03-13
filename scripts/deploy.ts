@@ -12,7 +12,7 @@ export let DiamondAddress: string;
 export async function deployDiamond() {
   const accounts = await ethers.getSigners();
   const contractOwner = accounts[0];
-
+  
   // deploy DiamondCutFacet
   const DiamondCutFacet = await ethers.getContractFactory("DiamondCutFacet");
   const diamondCutFacet = await DiamondCutFacet.deploy();
